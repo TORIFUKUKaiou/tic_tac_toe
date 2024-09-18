@@ -9,19 +9,13 @@ defmodule TicTacToeWeb.GameComponents do
     <div>
       <div class="status"><%= @status %></div>
       <div class="board-row">
-        <.square index={0} content={Enum.at(@squares, 0)} />
-        <.square index={1} content={Enum.at(@squares, 1)} />
-        <.square index={2} content={Enum.at(@squares, 2)} />
+        <.square :for={index <- 0..2} index={index} content={Enum.at(@squares, index)} />
       </div>
       <div class="board-row">
-        <.square index={3} content={Enum.at(@squares, 3)} />
-        <.square index={4} content={Enum.at(@squares, 4)} />
-        <.square index={5} content={Enum.at(@squares, 5)} />
+        <.square :for={index <- 3..5} index={index} content={Enum.at(@squares, index)} />
       </div>
       <div class="board-row">
-        <.square index={6} content={Enum.at(@squares, 6)} />
-        <.square index={7} content={Enum.at(@squares, 7)} />
-        <.square index={8} content={Enum.at(@squares, 8)} />
+        <.square :for={index <- 6..8} index={index} content={Enum.at(@squares, index)} />
       </div>
     </div>
     """
