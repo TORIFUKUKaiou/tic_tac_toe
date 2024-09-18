@@ -1,16 +1,16 @@
-# fly.toml app configuration file generated for tic-tac-toe-restless-star-8431 on 2024-09-18T15:19:22+09:00
+# fly.toml app configuration file generated for tic-tac-toe-icy-paper-4088 on 2024-09-18T15:40:13+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'tic-tac-toe-restless-star-8431'
-primary_region = 'nrt'
+app = 'tic-tac-toe-icy-paper-4088'
+primary_region = 'lax'
 kill_signal = 'SIGTERM'
 
 [build]
 
 [env]
-  PHX_HOST = 'tic-tac-toe-restless-star-8431.fly.dev'
+  PHX_HOST = 'tic-tac-toe-icy-paper-4088.fly.dev'
   PORT = '8080'
 
 [http_service]
@@ -27,6 +27,4 @@ kill_signal = 'SIGTERM'
     soft_limit = 1000
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+  size = 'shared-cpu-1x'
