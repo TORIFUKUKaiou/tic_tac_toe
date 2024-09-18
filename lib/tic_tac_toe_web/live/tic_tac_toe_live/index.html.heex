@@ -8,7 +8,7 @@
       entries={Enum.with_index(@history) |> Enum.map(fn {_, index} -> index end)}
     >
       <.button phx-click="move" phx-value-ref={index}>
-        <%= if index > 0, do: "Go to move ##{index}", else: "Game to game start" %>
+        <%= if index > 0, do: "Go to move ##{index}", else: "Go to game start" %>
       </.button>
     </.ordered_list>
   </div>
