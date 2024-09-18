@@ -1,0 +1,15 @@
+<div class="game">
+  <div>
+    <.board squares={@squares} status={@status} />
+  </div>
+  <div class="game-info">
+    <.ordered_list
+      :let={index}
+      entries={Enum.with_index(@history) |> Enum.map(fn {_, index} -> index end)}
+    >
+      <.button phx-click="move" phx-value-ref={index}>
+        <%= if index > 0, do: "Go to move ##{index}", else: "Game to game start" %>
+      </.button>
+    </.ordered_list>
+  </div>
+</div>

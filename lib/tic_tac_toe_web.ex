@@ -85,6 +85,7 @@ defmodule TicTacToeWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import TicTacToeWeb.CoreComponents
+      import TicTacToeWeb.GameComponents
       import TicTacToeWeb.Gettext
 
       # Shortcut for generating JS commands
